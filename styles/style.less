@@ -1,0 +1,667 @@
+@import "variables";
+
+body, p, h1, h2, h3, h4, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p, a, h1, h2, h3, h4 {
+    .fontStyleMixin;
+}
+
+p, h1, h2, h3, h4 {
+    cursor: default;
+}
+
+.clearfix {
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+
+.accentColor {
+    color: @accentColor;
+}
+
+.buttonStyle {
+    .buttonStyleMixin;
+    
+    &-black {
+        border: 3px solid @blackColor;
+        border-radius: 10px;
+        background-color: @blackColor;
+        
+        color: @whiteColor;
+        
+        &:hover {
+            border: 3px solid @blackColor;
+            background-color: transparent;
+            
+            color: @blackColor;
+            
+            cursor: pointer;
+        }
+    }
+    
+    &-yellow {
+        border: 3px solid @accentColor;
+        border-radius: 10px;
+        background-color: @accentColor;
+        
+        color: @blackColor;
+        
+        &:hover {
+            border: 3px solid @blackColor;
+            background-color: @blackColor;
+            
+            color: @whiteColor;
+            
+            cursor: pointer;
+        }
+    }
+}
+
+.container {
+    max-width: @containerWidth;
+    margin: 0 auto;
+    
+    overflow: hidden;
+}
+
+.header {
+    .sectionStyleMixin;
+    height: 739px;
+    
+    padding-top: 40px;
+    background: url(../images/header/background.png) no-repeat center top;
+    background-size: cover;
+    
+    &__flexWrapper {
+        .flexWrapperStyleMixin;
+        align-items: center;
+        
+        margin-top: 0;
+        
+        .header__logo {
+            a {
+                text-decoration: none;
+                
+                p {
+                    color: @whiteColor;
+                    font-size: 40px;
+                    font-weight: 900;
+                    
+                    &:nth-child(1) {
+                        text-transform: capitalize;
+                        
+                        span {
+                            text-transform: uppercase;
+                        }
+                    }
+                    
+                    &:nth-child(2) {
+                        font-size: 15px;
+                        letter-spacing: 2.6px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        
+        .header__nav {
+            ul {
+                margin: 0 20px;
+                
+                li {
+                    display: inline-block;
+                    
+                    a {
+                        padding: 5px 15px;
+                        
+                        color: @whiteColor;
+                        font-weight: 900;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        
+                        &:hover {
+                            background-color: @accentColor;
+                            border-radius: 30px;
+                            
+                            color: @blackColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    &__flyBox {
+        margin: 60px auto 0;
+        
+        p {
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+            
+            &:nth-child(1) {
+                font-size: 36px;
+            }
+            
+            &:nth-child(2) {
+                margin: 10px 0;
+                color: @whiteColor;
+                font-size: 72px;
+            }
+            
+            &:nth-child(3) {
+                a {
+                    color: @whiteColor;
+                    font-size: 20px;
+                    letter-spacing: 25px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    
+    img {
+        display: block;
+        margin: 64px auto 0;
+    }
+}
+
+main {
+    .bestInCity {
+        .sectionStyleMixin;
+        background-color: @accentColor;
+        
+        .bestInCity__flexWrapper {
+            .flexWrapperStyleMixin;
+            margin-top: 150px;
+            
+            .bestInCity__flexItem {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .preBookingInfo {
+                width: 500px;
+                padding: @internalPadding;
+                
+                h2, h4 {
+                    text-transform: uppercase;
+                    font-weight: 900;
+                }
+                
+                h4 {
+                    font-size: 35px;
+                }
+                
+                h2 {
+                    margin: 30px 0 40px;
+                    font-size: 50px;
+                    line-height: 45px;
+                }
+                
+                p {
+                    .paragraphStyleMixin;
+                }
+                
+                a {
+                    margin: 80px 0 0;
+                    width: @buttonWidth;
+                }
+            }
+            
+            .bookingBlock {
+                width: 425px;
+                
+                margin: 0 80px 90px 0;
+                
+                background-color: @whiteColor;
+                box-shadow: 0 20px 100px rgba(0,0,0,0.5);
+                
+                h4 {
+                    padding: 15px 25px;
+                    
+                    background-color: @blackColor;
+                    
+                    color: @whiteColor;
+                    font-size: 40px;
+                    
+                    text-transform: uppercase;
+                }
+                
+                form {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    
+                    padding: 0 30px 30px;
+                    
+                    input {
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4),
+                        &:nth-child(5),
+                        &:nth-child(6) {
+                            .inputStyleMixin;
+                            width: 48%;
+                        }
+                        
+                        &:nth-child(7) {
+                            .inputStyleMixin;
+                            width: 100%;
+                        }
+                        
+                        &[type="submit"] {
+                            width: 100%;
+                            margin-top: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .ourTariffs {
+        .sectionStyleMixin;
+        
+        h2 {
+            .headerStyleMixin;
+            
+            font-size: 45px;
+            line-height: 40px;
+        }
+        
+        .ourTariffs__flexWrapper {
+            .flexWrapperStyleMixin;
+            margin-top: 150px;
+            
+            &-item {
+                position: relative;
+                padding-top: 130px;
+                
+                background-color: @lightGreyColor;
+                
+                &:hover {
+                    background-color: @accentColor;
+                    
+                    .ourTariffs__price {
+                        color: @blackColor;
+                    }
+                    
+                    .ourTariffs__button {
+                        .blackButtonStyleMixin;
+                    }
+                    
+                    .ourTariffs__hiddenStar {
+                        display: block;
+                        z-index: 1;
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
+                    }
+                    
+                    &:after {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        content: "";
+                        border-style: solid;
+                        border-width: 0 0 80px 80px;
+                        border-color: transparent transparent @blackColor transparent;
+                    }
+                }
+                
+                &:nth-child(2) {
+                    margin: 0 40px;
+                }
+                
+                .ourTariffs__carImage {
+                    position: absolute;
+                    max-width: 100%;
+                    top: -70px;
+                }
+                
+                .ourTariffs__header {
+                    .headerStyleMixin;
+                    font-size: 30px;
+                }
+                
+                .ourTariffs__description {
+                    padding: 20px;
+                    text-align: center;
+                }
+                
+                .ourTariffs__price {
+                    .priceStyleMixin;
+                }
+                
+                .ourTariffs__button {
+                    .buttonStyleMixin;
+                    
+                    margin: 35px auto;
+                    width: @buttonWidth;
+                }
+                
+                .ourTariffs__hiddenStar {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .weDoBest {
+        .sectionStyleMixin;
+        background: url(../images/weDoBest/background.png) no-repeat center;
+        background-size: cover;
+        
+        &__header {
+            .headerStyleMixin;
+            color: @whiteColor;
+        }
+        
+        &__flexwrapper {
+            .flexWrapperStyleMixin;
+            flex-wrap: wrap;
+            
+            margin-top: 30px;
+            
+            .weDoBest__flexItem {                
+                width: 47%;
+                margin: 30px;
+                
+                &:nth-child(odd) {
+                    margin-left: 0;
+                }
+                
+                &:nth-child(even) {
+                    margin-right: 0;
+                }
+            }
+        }
+        
+        &__icon {
+            float: left;
+            margin: 0 40px 30px 0;
+        }
+        
+        &__smallHeader {
+            font-size: 25px;
+            color: @accentColor;
+            text-transform: uppercase;
+        }
+        
+        &__description {
+            color: @whiteColor;
+            padding-top: 20px;
+        }
+        
+        &__button {
+            .buttonStyleMixin;
+            margin-top: 30px;
+            width: @buttonWidth;
+        }
+    }
+    
+    .downloadApps {
+        &__header {
+            .headerStyleMixin;
+            margin-top: 80px;
+        }
+        
+        &__flexWrapper {
+            .flexWrapperStyleMixin;
+            
+            &__flexItem {
+                &:nth-child(1) {
+                    align-self: center;
+                }
+                
+                &:nth-child(2) {
+                    align-content: flex-end;
+                }
+            }
+        }
+        
+        &__smallHeader {
+            font-size: 26px;
+        }
+        
+        &__description {
+            max-width: 70%;
+            margin: 30px 0 60px;
+        }
+        
+        &__link {
+            text-decoration: none;
+            margin-right: 30px;
+            
+            &:hover {
+                img {
+                    filter: brightness(1.5);
+                }
+            }
+        }
+        
+        &__image {
+            display: block;
+        }
+    }
+    
+    .happyClients {
+        .sectionStyleMixin;
+        background: url(../images/happyClients/background.png) no-repeat center;
+        background-size: cover;
+        
+        color: @whiteColor;
+        
+        .container {
+            overflow: visible;
+        }
+        
+        &__header {
+            .headerStyleMixin;
+        }
+        
+        &__flexWrapper {            
+            .flexWrapperStyleMixin;
+        }
+        
+        &__flexItem {
+            position: relative;
+            
+            max-width: 40%;
+            padding: 40px;
+            margin-bottom: 80px;
+            background-color: @blackColor;
+            
+            &:hover {
+                background-color: lighten(@blackColor, 20%);
+                
+                &:after {
+                    content: '';
+                    border-style: solid;
+                    border-width: 40px 40px 0 0;
+                    border-color: lighten(@blackColor, 20%) transparent transparent transparent;
+                }
+            }
+            
+            &:after {
+                position: absolute;
+                bottom: -40px;
+                left: 70%;
+                
+                content: '';
+                border-style: solid;
+                border-width: 40px 40px 0 0;
+                border-color: @blackColor transparent transparent transparent;
+            }
+        }
+        
+        &__review {
+            .paragraphStyleMixin;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        &__photo {
+            float: left;
+            margin-right: 30px;
+        }
+        
+        &__name {
+            margin-top: 30px;
+            
+            color: @accentColor;
+            font-family: @LatoBold;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        
+        &__occupation {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+    
+    .phoneNumberSection {
+        .sectionStyleMixin;
+        background-color: @accentColor;
+        
+        h2, h3 {
+            padding: @internalPadding;
+            
+            color: @blackColor;
+            font-family: @LatoBold !important;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 35px;
+        }
+        
+        h2 {
+            font-size: 77px;
+        }
+    }
+}
+
+footer {
+    background-color: @blackColor;
+    color: @whiteColor;
+    
+    .contactInformation {
+        .sectionStyleMixin;
+        
+        &__header {
+            font-size: 25px;
+            text-transform: uppercase;
+            
+            padding-bottom: 30px;
+            
+            border-bottom: 5px solid @accentColor;
+        }
+        
+        &__description,
+        &__downloadDescription {
+            margin: 30px 0 20px;
+            text-align: justify;
+        }
+        
+        &__socialIcons a {
+            display: inline-block;
+            margin-right: 15px;
+            
+            color: @accentColor;
+            font-size: 25px;
+            
+            &:hover {
+                color: @whiteColor;
+            }
+        }
+        
+        &__androidIos {
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+                width: 80%;
+                
+                text-decoration: none;
+                
+                &:first-child {
+                    margin-bottom: 15px;
+                }
+                
+                &:hover span {
+                    color: @whiteColor;
+                }
+                
+                span {
+                    color: @accentColor;
+                    font-size: 20px;
+                    text-transform: capitalize;
+                }
+                
+                i {                    
+                    color: @whiteColor;
+                    font-size: 40px;
+                }
+            }
+        }
+        
+        &__contact {
+            margin-top: 30px;
+            
+            div {
+                display: flex;
+                
+                p {
+                    line-height: 50px;
+                    
+                    &:nth-child(1) {
+                        width: 20px;
+                    }
+                    
+                    &:nth-child(2) {
+                        margin-left: 30px;
+                    }
+                }
+            }
+        }
+        
+        &__address {}
+        
+        &__phone {}
+        
+        &__email {}
+        
+        &__website {}
+    }
+    
+    .contactInformation__flexWrapper {
+        .flexWrapperStyleMixin;
+        margin-top: 0;
+    }
+    
+    .contactInformation__flexItem {
+        width: 27%;
+    }
+    
+    .bottomPart {
+        background-color: @blackColor;
+        
+        p {
+            padding: 20px 0;
+            color: @whiteColor;
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+}

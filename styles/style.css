@@ -1,0 +1,750 @@
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: LatoBold;
+  src: url(../fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(../fonts/BebasNeue/BebasNeue-Bold.ttf);
+}
+.fontStyleMixin {
+  font-family: Lato, serif;
+}
+.sectionStyleMixin {
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+.flexWrapperStyleMixin {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+.headerStyleMixin {
+  padding: 0 20px;
+  font-family: LatoBold, serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+}
+.headerStyleMixin > span {
+  font-size: 35px;
+  color: #ffc713;
+}
+.paragraphStyleMixin {
+  text-align: justify;
+}
+.priceStyleMixin {
+  color: #ffc713;
+  font-family: LatoBold;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.buttonStyleMixin {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 20px;
+  font-family: BebasNeueBold, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.blackButtonStyleMixin {
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.blackButtonStyleMixin:hover {
+  border: 3px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+.inputStyleMixin {
+  padding: 30px 20px 5px 0;
+  box-sizing: border-box;
+  outline-style: none;
+  border-style: none;
+  border-bottom: 2px solid #e5e5e5;
+  color: #999999;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.inputStyleMixin:nth-child(odd)::placeholder {
+  color: #000000;
+}
+.inputStyleMixin:nth-child(even)::placeholder {
+  color: #999999;
+}
+.inputStyleMixin:hover {
+  border-bottom: 2px solid #ffc713;
+  cursor: pointer;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4 {
+  font-family: Lato, serif;
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  cursor: default;
+}
+.clearfix {
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+.accentColor {
+  color: #ffc713;
+}
+.buttonStyle {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 20px;
+  font-family: BebasNeueBold, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.buttonStyle-black {
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.buttonStyle-black:hover {
+  border: 3px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+.buttonStyle-yellow {
+  border: 3px solid #ffc713;
+  border-radius: 10px;
+  background-color: #ffc713;
+  color: #000000;
+}
+.buttonStyle-yellow:hover {
+  border: 3px solid #000000;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header {
+  padding: 80px 0;
+  box-sizing: border-box;
+  height: 739px;
+  padding-top: 40px;
+  background: url(../images/header/background.png) no-repeat center top;
+  background-size: cover;
+}
+.header__flexWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+  align-items: center;
+  margin-top: 0;
+}
+.header__flexWrapper .header__logo a {
+  text-decoration: none;
+}
+.header__flexWrapper .header__logo a p {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 900;
+}
+.header__flexWrapper .header__logo a p:nth-child(1) {
+  text-transform: capitalize;
+}
+.header__flexWrapper .header__logo a p:nth-child(1) span {
+  text-transform: uppercase;
+}
+.header__flexWrapper .header__logo a p:nth-child(2) {
+  font-size: 15px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+}
+.header__flexWrapper .header__nav ul {
+  margin: 0 20px;
+}
+.header__flexWrapper .header__nav ul li {
+  display: inline-block;
+}
+.header__flexWrapper .header__nav ul li a {
+  padding: 5px 15px;
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header__flexWrapper .header__nav ul li a:hover {
+  background-color: #ffc713;
+  border-radius: 30px;
+  color: #000000;
+}
+.header__flyBox {
+  margin: 60px auto 0;
+}
+.header__flyBox p {
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.header__flyBox p:nth-child(1) {
+  font-size: 36px;
+}
+.header__flyBox p:nth-child(2) {
+  margin: 10px 0;
+  color: #ffffff;
+  font-size: 72px;
+}
+.header__flyBox p:nth-child(3) a {
+  color: #ffffff;
+  font-size: 20px;
+  letter-spacing: 25px;
+  text-decoration: none;
+}
+.header img {
+  display: block;
+  margin: 64px auto 0;
+}
+main .bestInCity {
+  padding: 80px 0;
+  box-sizing: border-box;
+  background-color: #ffc713;
+}
+main .bestInCity .bestInCity__flexWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+  margin-top: 150px;
+}
+main .bestInCity .bestInCity__flexWrapper .bestInCity__flexItem {
+  display: flex;
+  flex-direction: column;
+}
+main .bestInCity .bestInCity__flexWrapper .preBookingInfo {
+  width: 500px;
+  padding: 0 20px;
+}
+main .bestInCity .bestInCity__flexWrapper .preBookingInfo h2,
+main .bestInCity .bestInCity__flexWrapper .preBookingInfo h4 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+main .bestInCity .bestInCity__flexWrapper .preBookingInfo h4 {
+  font-size: 35px;
+}
+main .bestInCity .bestInCity__flexWrapper .preBookingInfo h2 {
+  margin: 30px 0 40px;
+  font-size: 50px;
+  line-height: 45px;
+}
+main .bestInCity .bestInCity__flexWrapper .preBookingInfo p {
+  text-align: justify;
+}
+main .bestInCity .bestInCity__flexWrapper .preBookingInfo a {
+  margin: 80px 0 0;
+  width: 170px;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock {
+  width: 425px;
+  margin: 0 80px 90px 0;
+  background-color: #ffffff;
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.5);
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock h4 {
+  padding: 15px 25px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px 30px;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(1),
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(2),
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(3),
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(4),
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(5),
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(6) {
+  padding: 30px 20px 5px 0;
+  box-sizing: border-box;
+  outline-style: none;
+  border-style: none;
+  border-bottom: 2px solid #e5e5e5;
+  color: #999999;
+  font-size: 20px;
+  text-transform: capitalize;
+  width: 48%;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(1):nth-child(odd)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(2):nth-child(odd)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(3):nth-child(odd)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(4):nth-child(odd)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(5):nth-child(odd)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(6):nth-child(odd)::placeholder {
+  color: #000000;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(1):nth-child(even)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(2):nth-child(even)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(3):nth-child(even)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(4):nth-child(even)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(5):nth-child(even)::placeholder,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(6):nth-child(even)::placeholder {
+  color: #999999;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(1):hover,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(2):hover,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(3):hover,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(4):hover,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(5):hover,
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(6):hover {
+  border-bottom: 2px solid #ffc713;
+  cursor: pointer;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(7) {
+  padding: 30px 20px 5px 0;
+  box-sizing: border-box;
+  outline-style: none;
+  border-style: none;
+  border-bottom: 2px solid #e5e5e5;
+  color: #999999;
+  font-size: 20px;
+  text-transform: capitalize;
+  width: 100%;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(7):nth-child(odd)::placeholder {
+  color: #000000;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(7):nth-child(even)::placeholder {
+  color: #999999;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input:nth-child(7):hover {
+  border-bottom: 2px solid #ffc713;
+  cursor: pointer;
+}
+main .bestInCity .bestInCity__flexWrapper .bookingBlock form input[type="submit"] {
+  width: 100%;
+  margin-top: 50px;
+}
+main .ourTariffs {
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+main .ourTariffs h2 {
+  padding: 0 20px;
+  font-family: LatoBold, serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+  line-height: 40px;
+}
+main .ourTariffs h2 > span {
+  font-size: 35px;
+  color: #ffc713;
+}
+main .ourTariffs .ourTariffs__flexWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+  margin-top: 150px;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item {
+  position: relative;
+  padding-top: 130px;
+  background-color: #f5f4f2;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item:hover {
+  background-color: #ffc713;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item:hover .ourTariffs__price {
+  color: #000000;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item:hover .ourTariffs__button {
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item:hover .ourTariffs__button:hover {
+  border: 3px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item:hover .ourTariffs__hiddenStar {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item:hover:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  border-style: solid;
+  border-width: 0 0 80px 80px;
+  border-color: transparent transparent #000000 transparent;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item:nth-child(2) {
+  margin: 0 40px;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item .ourTariffs__carImage {
+  position: absolute;
+  max-width: 100%;
+  top: -70px;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item .ourTariffs__header {
+  padding: 0 20px;
+  font-family: LatoBold, serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-size: 30px;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item .ourTariffs__header > span {
+  font-size: 35px;
+  color: #ffc713;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item .ourTariffs__description {
+  padding: 20px;
+  text-align: center;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item .ourTariffs__price {
+  color: #ffc713;
+  font-family: LatoBold;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item .ourTariffs__button {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 20px;
+  font-family: BebasNeueBold, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 35px auto;
+  width: 170px;
+}
+main .ourTariffs .ourTariffs__flexWrapper-item .ourTariffs__hiddenStar {
+  display: none;
+}
+main .weDoBest {
+  padding: 80px 0;
+  box-sizing: border-box;
+  background: url(../images/weDoBest/background.png) no-repeat center;
+  background-size: cover;
+}
+main .weDoBest__header {
+  padding: 0 20px;
+  font-family: LatoBold, serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+  color: #ffffff;
+}
+main .weDoBest__header > span {
+  font-size: 35px;
+  color: #ffc713;
+}
+main .weDoBest__flexwrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+main .weDoBest__flexwrapper .weDoBest__flexItem {
+  width: 47%;
+  margin: 30px;
+}
+main .weDoBest__flexwrapper .weDoBest__flexItem:nth-child(odd) {
+  margin-left: 0;
+}
+main .weDoBest__flexwrapper .weDoBest__flexItem:nth-child(even) {
+  margin-right: 0;
+}
+main .weDoBest__icon {
+  float: left;
+  margin: 0 40px 30px 0;
+}
+main .weDoBest__smallHeader {
+  font-size: 25px;
+  color: #ffc713;
+  text-transform: uppercase;
+}
+main .weDoBest__description {
+  color: #ffffff;
+  padding-top: 20px;
+}
+main .weDoBest__button {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 20px;
+  font-family: BebasNeueBold, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 30px;
+  width: 170px;
+}
+main .downloadApps__header {
+  padding: 0 20px;
+  font-family: LatoBold, serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+  margin-top: 80px;
+}
+main .downloadApps__header > span {
+  font-size: 35px;
+  color: #ffc713;
+}
+main .downloadApps__flexWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+main .downloadApps__flexWrapper__flexItem:nth-child(1) {
+  align-self: center;
+}
+main .downloadApps__flexWrapper__flexItem:nth-child(2) {
+  align-content: flex-end;
+}
+main .downloadApps__smallHeader {
+  font-size: 26px;
+}
+main .downloadApps__description {
+  max-width: 70%;
+  margin: 30px 0 60px;
+}
+main .downloadApps__link {
+  text-decoration: none;
+  margin-right: 30px;
+}
+main .downloadApps__link:hover img {
+  filter: brightness(1.5);
+}
+main .downloadApps__image {
+  display: block;
+}
+main .happyClients {
+  padding: 80px 0;
+  box-sizing: border-box;
+  background: url(../images/happyClients/background.png) no-repeat center;
+  background-size: cover;
+  color: #ffffff;
+}
+main .happyClients .container {
+  overflow: visible;
+}
+main .happyClients__header {
+  padding: 0 20px;
+  font-family: LatoBold, serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+}
+main .happyClients__header > span {
+  font-size: 35px;
+  color: #ffc713;
+}
+main .happyClients__flexWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+main .happyClients__flexItem {
+  position: relative;
+  max-width: 40%;
+  padding: 40px;
+  margin-bottom: 80px;
+  background-color: #000000;
+}
+main .happyClients__flexItem:hover {
+  background-color: #333333;
+}
+main .happyClients__flexItem:hover:after {
+  content: '';
+  border-style: solid;
+  border-width: 40px 40px 0 0;
+  border-color: #333333 transparent transparent transparent;
+}
+main .happyClients__flexItem:after {
+  position: absolute;
+  bottom: -40px;
+  left: 70%;
+  content: '';
+  border-style: solid;
+  border-width: 40px 40px 0 0;
+  border-color: #000000 transparent transparent transparent;
+}
+main .happyClients__review {
+  text-align: justify;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+main .happyClients__photo {
+  float: left;
+  margin-right: 30px;
+}
+main .happyClients__name {
+  margin-top: 30px;
+  color: #ffc713;
+  font-family: LatoBold;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+main .happyClients__occupation {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+main .phoneNumberSection {
+  padding: 80px 0;
+  box-sizing: border-box;
+  background-color: #ffc713;
+}
+main .phoneNumberSection h2,
+main .phoneNumberSection h3 {
+  padding: 0 20px;
+  color: #000000;
+  font-family: LatoBold, serif !important;
+  text-transform: uppercase;
+  text-align: center;
+}
+main .phoneNumberSection h3 {
+  font-size: 35px;
+}
+main .phoneNumberSection h2 {
+  font-size: 77px;
+}
+footer {
+  background-color: #000000;
+  color: #ffffff;
+}
+footer .contactInformation {
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+footer .contactInformation__header {
+  font-size: 25px;
+  text-transform: uppercase;
+  padding-bottom: 30px;
+  border-bottom: 5px solid #ffc713;
+}
+footer .contactInformation__description,
+footer .contactInformation__downloadDescription {
+  margin: 30px 0 20px;
+  text-align: justify;
+}
+footer .contactInformation__socialIcons a {
+  display: inline-block;
+  margin-right: 15px;
+  color: #ffc713;
+  font-size: 25px;
+}
+footer .contactInformation__socialIcons a:hover {
+  color: #ffffff;
+}
+footer .contactInformation__androidIos a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  text-decoration: none;
+}
+footer .contactInformation__androidIos a:first-child {
+  margin-bottom: 15px;
+}
+footer .contactInformation__androidIos a:hover span {
+  color: #ffffff;
+}
+footer .contactInformation__androidIos a span {
+  color: #ffc713;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+footer .contactInformation__androidIos a i {
+  color: #ffffff;
+  font-size: 40px;
+}
+footer .contactInformation__contact {
+  margin-top: 30px;
+}
+footer .contactInformation__contact div {
+  display: flex;
+}
+footer .contactInformation__contact div p {
+  line-height: 50px;
+}
+footer .contactInformation__contact div p:nth-child(1) {
+  width: 20px;
+}
+footer .contactInformation__contact div p:nth-child(2) {
+  margin-left: 30px;
+}
+footer .contactInformation__flexWrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+  margin-top: 0;
+}
+footer .contactInformation__flexItem {
+  width: 27%;
+}
+footer .bottomPart {
+  background-color: #000000;
+}
+footer .bottomPart p {
+  padding: 20px 0;
+  color: #ffffff;
+  text-align: center;
+  text-transform: capitalize;
+}

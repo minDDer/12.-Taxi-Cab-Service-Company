@@ -1,0 +1,156 @@
+//VARIABLES
+@containerWidth: 1100px;
+@buttonWidth: 170px;
+@internalPadding: 0 20px;
+
+//COLORS
+@accentColor: #ffc713;
+@whiteColor: #fff;
+@greyColor: #e5e5e5;
+@lightGreyColor: #f5f4f2;
+@blackColor: #000;
+
+//FONTS
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato/Lato-Regular.ttf)
+}
+@Lato: Lato, serif;
+
+@font-face {
+    font-family: LatoBold;
+    src: url(../fonts/Lato/Lato-Black.ttf)
+}
+@LatoBold: LatoBold, serif;
+
+@font-face {
+    font-family: BebasNeueBold;
+    src: url(../fonts/BebasNeue/BebasNeue-Bold.ttf)
+}
+@BebasNeueBold: BebasNeueBold, sans-serif;
+
+//MIXINS
+.fontStyleMixin {
+    font-family: @Lato;
+}
+
+.sectionStyleMixin {
+    padding: 80px 0;
+    box-sizing: border-box
+}
+
+.flexWrapperStyleMixin {
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 80px;
+    padding: @internalPadding;
+}
+
+.headerStyleMixin {
+    padding: @internalPadding;
+    
+    font-family: @LatoBold !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45px;
+    
+    & > span {
+        font-size: 35px;
+        color: @accentColor;
+    }
+}
+
+.paragraphStyleMixin {
+    text-align: justify;
+}
+
+.priceStyleMixin {
+    color: @accentColor;
+    font-family: @LatoBold;
+    font-size: 45px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.buttonStyleMixin {
+    display: block;
+    
+    margin: 0 auto;
+    padding: 7px 20px;
+    
+    font-family: @BebasNeueBold;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.blackButtonStyleMixin {
+    border: 3px solid @blackColor;
+    border-radius: 10px;
+    background-color: @blackColor;
+    
+    color: @whiteColor;
+    
+    &:hover {
+        border: 3px solid @blackColor;
+        background-color: transparent;
+        
+        color: @blackColor;
+        
+        cursor: pointer;
+    }
+}
+
+.inputStyleMixin {
+    padding: 30px 20px 5px 0;
+    
+    box-sizing: border-box;
+    
+    outline-style: none;
+    border-style: none;
+    border-bottom: 2px solid @greyColor;
+    
+    color: lighten(@blackColor, 60%);
+    font-size: 20px;
+    text-transform: capitalize;
+    
+    &:nth-child(odd)::placeholder {
+        color: @blackColor;
+    }
+    
+    &:nth-child(even)::placeholder {
+        color: lighten(@blackColor, 60%);
+    }
+    
+    &:hover {
+        border-bottom: 2px solid @accentColor;
+        cursor: pointer;
+    }
+}
+
+//ADAPTIVITY MIXIN
+.respond-to (@device, @content) {
+    & when (@device = phones) {
+        @media screen and (max-width: 480px) { @content(); }
+    }
+    & when (@device = wide-phones) {
+        @media screen and (min-width: 480px) and (max-width: 767px) { @content(); }
+    }
+    & when (@device = tablets) {
+        @media screen and (min-width: 768px) and (max-width: 991px) { @content(); }
+    }
+    & when (@device = small-desktops) {
+        @media screen and (min-width: 992px) and (max-width: 1199px) { @content(); }
+    }
+    & when (@device = lg-desktops) {
+        @media screen and (min-width: 1200px) and (max-width: 1440px) { @content(); }
+    }
+    & when (@device = xlg-desktops) {
+        @media screen and (min-width: 1441px) { @content(); }
+    }   
+}
+//END OF ADAPTIVITY MIXIN
+
+//END OF VARIABLES

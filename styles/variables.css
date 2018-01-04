@@ -1,0 +1,88 @@
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: LatoBold;
+  src: url(../fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+  font-family: BebasNeueBold;
+  src: url(../fonts/BebasNeue/BebasNeue-Bold.ttf);
+}
+.fontStyleMixin {
+  font-family: Lato, serif;
+}
+.sectionStyleMixin {
+  padding: 80px 0;
+  box-sizing: border-box;
+}
+.flexWrapperStyleMixin {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 0 20px;
+}
+.headerStyleMixin {
+  padding: 0 20px;
+  font-family: LatoBold, serif !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 45px;
+}
+.headerStyleMixin > span {
+  font-size: 35px;
+  color: #ffc713;
+}
+.paragraphStyleMixin {
+  text-align: justify;
+}
+.priceStyleMixin {
+  color: #ffc713;
+  font-family: LatoBold;
+  font-size: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.buttonStyleMixin {
+  display: block;
+  margin: 0 auto;
+  padding: 7px 20px;
+  font-family: BebasNeueBold, sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.blackButtonStyleMixin {
+  border: 3px solid #000000;
+  border-radius: 10px;
+  background-color: #000000;
+  color: #ffffff;
+}
+.blackButtonStyleMixin:hover {
+  border: 3px solid #000000;
+  background-color: transparent;
+  color: #000000;
+  cursor: pointer;
+}
+.inputStyleMixin {
+  padding: 30px 20px 5px 0;
+  box-sizing: border-box;
+  outline-style: none;
+  border-style: none;
+  border-bottom: 2px solid #e5e5e5;
+  color: #999999;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.inputStyleMixin:nth-child(odd)::placeholder {
+  color: #000000;
+}
+.inputStyleMixin:nth-child(even)::placeholder {
+  color: #999999;
+}
+.inputStyleMixin:hover {
+  border-bottom: 2px solid #ffc713;
+  cursor: pointer;
+}
